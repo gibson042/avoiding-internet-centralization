@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-07T00:02:42.875098+00:00",
+  "timestamp": "2021-12-09T00:02:42.859359+00:00",
   "repo": "mnot/avoiding-internet-centralization",
   "labels": [
     {
@@ -49,6 +49,55 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOGCfj784_8_bx",
+      "title": "Add examples",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/1",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Throughout, but especially in the recommendations.",
+      "createdAt": "2021-12-07T06:04:44Z",
+      "updatedAt": "2021-12-07T06:04:44Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOGCfj784_8_eY",
+      "title": "Expand upon distributed consensus / blockchain",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/2",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-12-07T06:05:01Z",
+      "updatedAt": "2021-12-07T06:05:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOGCfj784_-YZl",
+      "title": "access to data also creates barriers to entry",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/3",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "relate to observation ",
+      "createdAt": "2021-12-07T12:52:06Z",
+      "updatedAt": "2021-12-08T05:58:54Z",
+      "closedAt": "2021-12-08T05:58:54Z",
+      "comments": []
+    }
+  ],
   "pulls": []
 }
