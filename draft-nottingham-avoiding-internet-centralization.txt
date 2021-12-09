@@ -3,9 +3,9 @@
 
 
 Network Working Group                                      M. Nottingham
-Internet-Draft                                           8 December 2021
+Internet-Draft                                           9 December 2021
 Intended status: Informational                                          
-Expires: 11 June 2022
+Expires: 12 June 2022
 
 
                     Avoiding Internet Centralization
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 June 2022.
+   This Internet-Draft will expire on 12 June 2022.
 
 Copyright Notice
 
@@ -510,15 +510,14 @@ Table of Contents
    These techniques avoid centralization risk by distributing
    intermediary or otherwise potentially centralized functions to
    members of a large pool of protocol participants.  Verification of
-   proper performance of a function is typically guaranteed through a
-   combination of cryptographic techniques and duplication of effort to
-   check results.  The assignment of a particular task to a node for
-   handling usually cannot be predicted or controlled.  To assure
-   diversity in the pool of participants (thereby preventing Sybil
-   attacks), techniques such as proof-of-work (where each participant
-   has to demonstrate significant use of resources) or proof-of-stake
-   (where each participant has some other incentive to execute
-   correctly) are used.
+   proper performance of a function is typically guaranteed using
+   cryptographic techniques (often, an append-only transaction ledger).
+   The assignment of a particular task to a node for handling usually
+   cannot be predicted or controlled.  To assure diversity in the pool
+   of participants (thereby preventing Sybil attacks), techniques such
+   as proof-of-work (where each participant has to demonstrate
+   significant consumption of resources) or proof-of-stake (where each
+   participant has some other incentive to execute correctly) are used.
 
    As such, these techniques purposefully disallow direct centralization
    and are robust against inherited centralization.  Depending upon the
@@ -540,9 +539,9 @@ Table of Contents
 
    2.  Their complexity and 'chattiness' typically results in
        significantly less efficient use of the network.  When
-       distributed consensus protocols use 'proof of work' at scale,
-       energy consumption can become significant (to the point where
-       some jurisdictions have banned its use).
+       distributed consensus protocols use proof-of-work, energy
+       consumption can become significant (to the point where some
+       jurisdictions have banned its use).
 
    3.  Distributed consensus protocols are still not proven to scale to
        the degree expected of successful Internet protocols.  In
@@ -559,10 +558,19 @@ Table of Contents
        how the function is performed is impossible, beyond the bounds of
        the protocol's design.
 
+   It is also important to recognise that a protocol can use distributed
+   consensus for some functions, but still have centralization risk
+   elsewhere.  Even when distributed consensus is used exclusively
+   (which is uncommon, due to the associated costs), some degree of
+   coordination is still necessary -- whether that be through governance
+   of the function itself, creation of shared implementations, or
+   documentation of shared wire protocols.  That represents
+   centralization risk, just at a different layer (inherited or
+   platform, depending on the circumstances).
+
    These potential shortcomings do not rule out the use of distributed
-   consensus technologies for every use case, and solutions or
-   mitigations are maturing.  They do, however, caution against applying
-   these technologies uncritically.
+   consensus technologies for every use case.  They do, however, caution
+   against relying upon these technologies uncritically.
 
 5.  Guidelines for Protocol Designers
 
