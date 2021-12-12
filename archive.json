@@ -1,27 +1,12 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-09T00:02:42.859359+00:00",
+  "timestamp": "2021-12-12T00:02:47.392361+00:00",
   "repo": "mnot/avoiding-internet-centralization",
   "labels": [
-    {
-      "name": "bug",
-      "description": "Something isn't working",
-      "color": "d73a4a"
-    },
-    {
-      "name": "documentation",
-      "description": "Improvements or additions to documentation",
-      "color": "0075ca"
-    },
     {
       "name": "duplicate",
       "description": "This issue or pull request already exists",
       "color": "cfd3d7"
-    },
-    {
-      "name": "enhancement",
-      "description": "New feature or request",
-      "color": "a2eeef"
     },
     {
       "name": "help wanted",
@@ -29,24 +14,9 @@
       "color": "008672"
     },
     {
-      "name": "good first issue",
-      "description": "Good for newcomers",
-      "color": "7057ff"
-    },
-    {
       "name": "invalid",
       "description": "This doesn't seem right",
       "color": "e4e669"
-    },
-    {
-      "name": "question",
-      "description": "Further information is requested",
-      "color": "d876e3"
-    },
-    {
-      "name": "wontfix",
-      "description": "This will not be worked on",
-      "color": "ffffff"
     }
   ],
   "issues": [
@@ -99,5 +69,40 @@
       "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 4,
+      "id": "PR_kwDOGCfj784vqoJB",
+      "title": "single typo correction \"simlair\"",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/pull/4",
+      "state": "OPEN",
+      "author": "synctext",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-12-10T09:06:13Z",
+      "updatedAt": "2021-12-10T09:09:04Z",
+      "baseRepository": "mnot/avoiding-internet-centralization",
+      "baseRefName": "main",
+      "baseRefOid": "1fd631dd954640481d2b15926e3f25e6940a1116",
+      "headRepository": "synctext/avoiding-internet-centralization",
+      "headRefName": "patch-1",
+      "headRefOid": "a0305a7bb1b458f3a7f1704e7d0dee459239c720",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "synctext",
+          "authorAssociation": "NONE",
+          "body": "impressive work btw\r\nIf this ever moves into IETF WG stage, please count us in!\r\nBackground, see my drafts:\r\nhttps://www.ietfjournal.org/moving-toward-a-censorship-free-internet/\r\nhttps://tools.ietf.org/id/draft-pouwelse-trustchain-01.html\r\nhttps://datatracker.ietf.org/doc/html/rfc7574 (my university lab)",
+          "createdAt": "2021-12-10T09:09:04Z",
+          "updatedAt": "2021-12-10T09:09:04Z"
+        }
+      ],
+      "reviews": []
+    }
+  ]
 }
