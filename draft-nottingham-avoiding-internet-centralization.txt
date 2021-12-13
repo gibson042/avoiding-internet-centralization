@@ -3,9 +3,9 @@
 
 
 Network Working Group                                      M. Nottingham
-Internet-Draft                                           9 December 2021
+Internet-Draft                                          13 December 2021
 Intended status: Informational                                          
-Expires: 12 June 2022
+Expires: 16 June 2022
 
 
                     Avoiding Internet Centralization
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 June 2022.
+   This Internet-Draft will expire on 16 June 2022.
 
 Copyright Notice
 
@@ -249,7 +249,7 @@ Table of Contents
    role for a specific party.
 
    For example, most proprietary messaging, videoconferencing, chat, and
-   simliar protocols operate in this fashion.
+   similar protocols operate in this fashion.
 
    While it has been argued that such protocols are simpler to design,
    more amenable to evolution, and more likely to meet user
