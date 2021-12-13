@@ -187,7 +187,7 @@ Table of Contents
    intentional, the 'informational and positional advantages'
    [INTERMEDIARY-INFLUENCE] gained can be used to observe behavior (the
    'panopticon effect') and shape or even deny behaviour (the
-   'chokepoint effect') -- which can be used those parties (or the
+   'chokepoint effect') -- which can be used by those parties (or the
    states that have authority over them) for coercive ends.
    [WEAPONIZED-INTERDEPENDENCE]
 
@@ -471,7 +471,7 @@ Table of Contents
    Furthermore, those operators are regulated by ICANN
    (https://www.icann.org/resources/pages/governance/governance-en),
    which is defined as a globally multi-stakeholder body with
-   representation from a end users, governments, operators, and others.
+   representation from end users, governments, operators, and others.
 
    Another example of multi-stakeholderism is the standardization of
    Internet protocols themselves.  Because a specification effectively
