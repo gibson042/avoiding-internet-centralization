@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-12T00:02:47.392361+00:00",
+  "timestamp": "2021-12-14T00:02:45.851886+00:00",
   "repo": "mnot/avoiding-internet-centralization",
   "labels": [
     {
@@ -75,31 +75,76 @@
       "id": "PR_kwDOGCfj784vqoJB",
       "title": "single typo correction \"simlair\"",
       "url": "https://github.com/mnot/avoiding-internet-centralization/pull/4",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "synctext",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2021-12-10T09:06:13Z",
-      "updatedAt": "2021-12-10T09:09:04Z",
+      "updatedAt": "2021-12-13T00:19:21Z",
       "baseRepository": "mnot/avoiding-internet-centralization",
       "baseRefName": "main",
       "baseRefOid": "1fd631dd954640481d2b15926e3f25e6940a1116",
       "headRepository": "synctext/avoiding-internet-centralization",
       "headRefName": "patch-1",
       "headRefOid": "a0305a7bb1b458f3a7f1704e7d0dee459239c720",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2021-12-13T00:19:16Z",
+      "mergedAt": "2021-12-13T00:19:16Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "6b573240bdaebd48a0d7a04c867900d0899ee34f"
+      },
       "comments": [
         {
           "author": "synctext",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "impressive work btw\r\nIf this ever moves into IETF WG stage, please count us in!\r\nBackground, see my drafts:\r\nhttps://www.ietfjournal.org/moving-toward-a-censorship-free-internet/\r\nhttps://tools.ietf.org/id/draft-pouwelse-trustchain-01.html\r\nhttps://datatracker.ietf.org/doc/html/rfc7574 (my university lab)",
           "createdAt": "2021-12-10T09:09:04Z",
           "updatedAt": "2021-12-10T09:09:04Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "OWNER",
+          "body": "Thanks!",
+          "createdAt": "2021-12-13T00:19:21Z",
+          "updatedAt": "2021-12-13T00:19:21Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOGCfj784vuruS",
+      "title": "a couple more typos",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/pull/5",
+      "state": "MERGED",
+      "author": "dmfay",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-12-13T00:13:02Z",
+      "updatedAt": "2021-12-13T00:19:57Z",
+      "baseRepository": "mnot/avoiding-internet-centralization",
+      "baseRefName": "main",
+      "baseRefOid": "1fd631dd954640481d2b15926e3f25e6940a1116",
+      "headRepository": "dmfay/avoiding-internet-centralization",
+      "headRefName": "patch-1",
+      "headRefOid": "9215074413a095dc10a8f5c6db6c23ff0535649a",
+      "closedAt": "2021-12-13T00:19:52Z",
+      "mergedAt": "2021-12-13T00:19:52Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "d6128fa11a5a76924103cc6b19fa23e1c860f79e"
+      },
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "OWNER",
+          "body": "Thanks!",
+          "createdAt": "2021-12-13T00:19:57Z",
+          "updatedAt": "2021-12-13T00:19:57Z"
         }
       ],
       "reviews": []
