@@ -1016,7 +1016,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham</td>
-<td class="center">Expires 16 June 2022</td>
+<td class="center">Expires 18 June 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1029,12 +1029,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-nottingham-avoiding-internet-centralization-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-12-13" class="published">13 December 2021</time>
+<time datetime="2021-12-15" class="published">15 December 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-06-16">16 June 2022</time></dd>
+<dd class="expires"><time datetime="2022-06-18">18 June 2022</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1077,7 +1077,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 16 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 June 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1228,11 +1228,11 @@ shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-why-avoid-centralization" class="section-name selfRef">Why Avoid Centralization</a>
       </h2>
 <p id="section-2-1">Centralization is undesirable in the design of Internet protocols for many reasons -- in particular, because it is counter to the nature of the Internet, because it violates the purpose of the Internet from the perspective of its end users, and because of the many negative effects it can have on the networks operation and evolution.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">By its very nature, the Internet must avoid centralization. As a 'large, heterogeneous collection of interconnected systems' <span>[<a href="#BCP95" class="xref">BCP95</a>]</span> the Internet is often characterised as a 'network of networks'. As such, these networks relate as peers who agree to facilitate communication, rather than having a relationship of subservience to others' requirements or coercion by them.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-2">Firstly, the Internet's very nature is incompatible with centralization of its functions. As a 'large, heterogeneous collection of interconnected systems' <span>[<a href="#BCP95" class="xref">BCP95</a>]</span> the Internet is often characterised as a 'network of networks'. As such, these networks relate as peers who agree to facilitate communication, rather than having a relationship of subservience to others' requirements or coercion by them.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">However, many Internet protocols allow a third party to be interposed into communication between two other parties. In some cases, this is not intended by the protocol's designers; for example, intervening networks have taken advantage of unencrypted deployment of HTTP <span>[<a href="#HTTP" class="xref">HTTP</a>]</span> to interpose 'interception proxies' (also known as 'transparent proxies') to cache, filter, track, or change traffic. In cases where interposition of a third party is a designed feature of the protocol, it is often characterised as <em>intermediation</em>, and is typically used to help provide the protocol's functions -- sometimes including those that are necessary for it to operate.<a href="#section-2-3" class="pilcrow">¶</a></p>
 <p id="section-2-4">Whether or not interposition of a third party into communication is intentional, the 'informational and positional advantages' <span>[<a href="#INTERMEDIARY-INFLUENCE" class="xref">INTERMEDIARY-INFLUENCE</a>]</span> gained can be used to observe behavior (the 'panopticon effect') and shape or even deny behaviour (the 'chokepoint effect') -- which can be used by those parties (or the states that have authority over them) for coercive ends. <span>[<a href="#WEAPONIZED-INTERDEPENDENCE" class="xref">WEAPONIZED-INTERDEPENDENCE</a>]</span><a href="#section-2-4" class="pilcrow">¶</a></p>
 <p id="section-2-5">As Internet protocols' first duty is to the end user <span>[<a href="#RFC8890" class="xref">RFC8890</a>]</span>, allowing such power to be concentrated into few hands is counter to the IETF's mission of creating an Internet that 'will help us to build a better human society.' <span>[<a href="#BCP95" class="xref">BCP95</a>]</span><a href="#section-2-5" class="pilcrow">¶</a></p>
-<p id="section-2-6">Additionally, concentration of power has deleterious effects on the Internet itself, including:<a href="#section-2-6" class="pilcrow">¶</a></p>
+<p id="section-2-6">Finally, concentration of power has deleterious effects on the Internet itself, including:<a href="#section-2-6" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-2-7.1">
           <em>Limiting Innovation</em>: Centralization can preclude the possibility of 'permissionless innovation' -- the ability to deploy new, unforeseen applications without requiring coordination with parties other than those you are communicating with.<a href="#section-2-7.1" class="pilcrow">¶</a>
@@ -1250,7 +1250,7 @@ shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
           <em>Self-Reinforcement</em>: As widely noted (see, eg., <span>[<a href="#ACCESS" class="xref">ACCESS</a>]</span>), a centralized service benefits from access to data which can be used to further improve its offerings, while denying such access to others.<a href="#section-2-7.5" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-2-8">To summarize, we avoid centralization because it would allow the Internet (or some part of it) to be captured, effectively turning it into a 'walled garden' that fails to meet both architectural design goals and users' expectations, while endangering the viability of the Internet at the same time.<a href="#section-2-8" class="pilcrow">¶</a></p>
+<p id="section-2-8">To summarize, centralization would allow the Internet (or some part of it) to be captured, effectively turning it into a 'walled garden' that fails to meet both architectural design goals and users' expectations, while endangering the viability of the Internet at the same time.<a href="#section-2-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="kinds">
@@ -1325,12 +1325,13 @@ shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
       <h2 id="name-the-limits-of-decentralizat">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-the-limits-of-decentralizat" class="section-name selfRef">The Limits of Decentralization</a>
       </h2>
+<p id="section-4-1">Over time, techniques have been developed to 'decentralize' protocols and applications. While these approaches can be used to create a system which is less centralized or less supportive of some kinds of centralization, they are not adequate to completely avoid centralization on their own. As such, while the use of these techniques is often appropriate and sometimes effective, they are not indicators of whether a protocol is centralized without further analysis.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <div id="federation">
 <section id="section-4.1">
         <h3 id="name-federation-isnt-enough">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-federation-isnt-enough" class="section-name selfRef">Federation isn't Enough</a>
         </h3>
-<p id="section-4.1-1">A widely known technique for avoiding centralization in Internet protocols is federation - that is, designing them in such a way that new instances of any intermediary or otherwise centralized function are relatively easy to create, and they are able to maintain interoperability and connectivity with other instances.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">A widely known technique for managing centralization in Internet protocols is federation - that is, designing them in such a way that new instances of any intermediary or otherwise centralized function are relatively easy to create, and they are able to maintain interoperability and connectivity with other instances.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.1-2">For example, SMTP <span>[<a href="#RFC5321" class="xref">RFC5321</a>]</span> is the basis of the e-mail suite of protocols, which has two functions that are necessarily centralized:<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4.1-3">
 <li id="section-4.1-3.1">Giving each user a globally unique address, and<a href="#section-4.1-3.1" class="pilcrow">¶</a>
@@ -1338,7 +1339,7 @@ shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
           <li id="section-4.1-3.2">Routing messages to the user, even when they change network locations or are disconnected for long periods of time.<a href="#section-4.1-3.2" class="pilcrow">¶</a>
 </li>
         </ol>
-<p id="section-4.1-4">E-mail reuses DNS to mitigating first risk (see <a href="#reuse" class="xref">Section 5.3</a>). To mitigate the second, it defines an intermediary role for routing users' messages, the Message Transfer Agent (MTA). By allowing anyone to deploy a MTA and defining rules for interconnecting them, the protocol's users avoid the need for a single, central router.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">E-mail reuses DNS to mitigating first risk (see <a href="#reuse" class="xref">Section 5.3</a>). To mitigate the second, it defines an intermediary role for routing users' messages, the Message Transfer Agent (MTA). By allowing anyone to deploy a MTA and defining rules for interconnecting them, the protocol's users avoid a requirement for a single, central router.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
 <p id="section-4.1-5">Users can (and often do) choose to delegate that role to someone else, or run their own MTA. However, running your own mail server has become difficult, due to the likelihood of a small MTA being classified as a spam source. Because large MTA operaters are widely known and have greater impact if their operation is affected, they are less likely to be classified as such, thereby indirectly centralizing the protocol's operation (see <a href="#indirect" class="xref">Section 3.3</a>).<a href="#section-4.1-5" class="pilcrow">¶</a></p>
 <p id="section-4.1-6">This illustrates that while federation can be effective at avoiding direct centralization and managing necessary centralization, federated protocols are still vulnerable to indirect centralization, and may exhibit platform centralization.<a href="#section-4.1-6" class="pilcrow">¶</a></p>
 <p id="section-4.1-7">Another example of a federated Internet protocol is XMPP <span>[<a href="#RFC6120" class="xref">RFC6120</a>]</span>, supporting 'instant messaging' and similar functionality. Like e-mail, it reuses DNS for naming and requires federation to facilitate rendezvous of users from different systems.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
@@ -1351,12 +1352,12 @@ shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
         <h3 id="name-multi-stakeholder-administr">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-multi-stakeholder-administr" class="section-name selfRef">Multi-Stakeholder Administration is Hard</a>
         </h3>
-<p id="section-4.2-1">Delegating the administration of a necessarily centralized function (see <a href="#necessary" class="xref">Section 3.2</a>) to a multi-stakeholder body is an onerous but sometimes necessary way to mitigate the undesirable effects.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">Delegating the administration of a necessarily centralized function (see <a href="#necessary" class="xref">Section 3.2</a>) to a multi-stakeholder body is an onerous but sometimes necessary method to mitigate centralization.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">A multi-stakeholder body is an institution that includes representatives of the different kinds of parties that are affected by the system's operation ('stakeholders') in an attempt to make well-reasoned, broadly agreed-to, and authoritative decisions.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.2-3">The most relevant example of this technique is the administration of the Domain Name System <span>[<a href="#RFC1035" class="xref">RFC1035</a>]</span>, which as a 'single source of truth' requires centralization of the naming function. To mitigate centralization, this task is carried out by multiple root servers that are administered by separate operators -- themselves diverse in geography and a selection of corporate entities, non-profits and government bodies from many jurisdictions and affiliations. Furthermore, those operators are <a href="https://www.icann.org/resources/pages/governance/governance-en">regulated by ICANN</a>, which is defined as a globally multi-stakeholder body with representation from end users, governments, operators, and others.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.2-4">Another example of multi-stakeholderism is the standardization of Internet protocols themselves. Because a specification effectively controls the behavior of implementations that are conformant with it, the standardization process can be seen as a single point of control. As a result, Internet standards bodies like the IETF allow open participation and contribution, make decisions in an open and accountable way, have a well-defined process for making (and when necessary, appealing) decisions, and take into account the views of different stakeholder groups <span>[<a href="#RFC8890" class="xref">RFC8890</a>]</span>.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.2-5">Yet another example is the administration of the Web's trust model, implemented by Web browsers as relying parties and Certificate Authorities as trust anchors. To assure that all parties meet the operational and security requirements necessary to provide the desired properties, the <a href="https://cabforum.org">CA/Browser Forum</a> was established as an oversight body that involves both of those parties as stakeholders.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
-<p id="section-4.2-6">In each of these examples, setup and ongoing operation of a multi-stakeholder organization is not trivial. This is the major downside of such an approach. Additionally, the legitimacy of such an organization cannot be assumed, and may be difficult to establish and maintain (see, eg, <span>[<a href="#LEGITIMACY-MULTI" class="xref">LEGITIMACY-MULTI</a>]</span>). This concern is especially relevant if the function being coordinated is broad, complex, and/or contentious.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
+<p id="section-4.2-6">In each of these examples, setup and ongoing operation of a multi-stakeholder organization is not trivial. This is a major downside of such an approach. Additionally, the legitimacy of such an organization cannot be assumed, and may be difficult to establish and maintain (see, eg, <span>[<a href="#LEGITIMACY-MULTI" class="xref">LEGITIMACY-MULTI</a>]</span>). This concern is especially relevant if the function being coordinated is broad, complex, and/or contentious.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="distributed">

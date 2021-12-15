@@ -3,9 +3,9 @@
 
 
 Network Working Group                                      M. Nottingham
-Internet-Draft                                          13 December 2021
+Internet-Draft                                          15 December 2021
 Intended status: Informational                                          
-Expires: 16 June 2022
+Expires: 18 June 2022
 
 
                     Avoiding Internet Centralization
@@ -47,7 +47,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 June 2022.
+   This Internet-Draft will expire on 18 June 2022.
 
 Copyright Notice
 
@@ -159,12 +159,13 @@ Table of Contents
    the perspective of its end users, and because of the many negative
    effects it can have on the networks operation and evolution.
 
-   By its very nature, the Internet must avoid centralization.  As a
-   'large, heterogeneous collection of interconnected systems' [BCP95]
-   the Internet is often characterised as a 'network of networks'.  As
-   such, these networks relate as peers who agree to facilitate
-   communication, rather than having a relationship of subservience to
-   others' requirements or coercion by them.
+   Firstly, the Internet's very nature is incompatible with
+   centralization of its functions.  As a 'large, heterogeneous
+   collection of interconnected systems' [BCP95] the Internet is often
+   characterised as a 'network of networks'.  As such, these networks
+   relate as peers who agree to facilitate communication, rather than
+   having a relationship of subservience to others' requirements or
+   coercion by them.
 
    However, many Internet protocols allow a third party to be interposed
    into communication between two other parties.  In some cases, this is
@@ -190,7 +191,7 @@ Table of Contents
    the IETF's mission of creating an Internet that 'will help us to
    build a better human society.'  [BCP95]
 
-   Additionally, concentration of power has deleterious effects on the
+   Finally, concentration of power has deleterious effects on the
    Internet itself, including:
 
    *  _Limiting Innovation_: Centralization can preclude the possibility
@@ -225,11 +226,11 @@ Table of Contents
       to further improve its offerings, while denying such access to
       others.
 
-   To summarize, we avoid centralization because it would allow the
-   Internet (or some part of it) to be captured, effectively turning it
-   into a 'walled garden' that fails to meet both architectural design
-   goals and users' expectations, while endangering the viability of the
-   Internet at the same time.
+   To summarize, centralization would allow the Internet (or some part
+   of it) to be captured, effectively turning it into a 'walled garden'
+   that fails to meet both architectural design goals and users'
+   expectations, while endangering the viability of the Internet at the
+   same time.
 
 3.  Kinds of Centralization
 
@@ -387,9 +388,18 @@ Table of Contents
 
 4.  The Limits of Decentralization
 
+   Over time, techniques have been developed to 'decentralize' protocols
+   and applications.  While these approaches can be used to create a
+   system which is less centralized or less supportive of some kinds of
+   centralization, they are not adequate to completely avoid
+   centralization on their own.  As such, while the use of these
+   techniques is often appropriate and sometimes effective, they are not
+   indicators of whether a protocol is centralized without further
+   analysis.
+
 4.1.  Federation isn't Enough
 
-   A widely known technique for avoiding centralization in Internet
+   A widely known technique for managing centralization in Internet
    protocols is federation - that is, designing them in such a way that
    new instances of any intermediary or otherwise centralized function
    are relatively easy to create, and they are able to maintain
@@ -407,7 +417,8 @@ Table of Contents
    mitigate the second, it defines an intermediary role for routing
    users' messages, the Message Transfer Agent (MTA).  By allowing
    anyone to deploy a MTA and defining rules for interconnecting them,
-   the protocol's users avoid the need for a single, central router.
+   the protocol's users avoid a requirement for a single, central
+   router.
 
    Users can (and often do) choose to delegate that role to someone
    else, or run their own MTA.  However, running your own mail server
@@ -448,7 +459,7 @@ Table of Contents
 
    Delegating the administration of a necessarily centralized function
    (see Section 3.2) to a multi-stakeholder body is an onerous but
-   sometimes necessary way to mitigate the undesirable effects.
+   sometimes necessary method to mitigate centralization.
 
    A multi-stakeholder body is an institution that includes
    representatives of the different kinds of parties that are affected
@@ -486,8 +497,8 @@ Table of Contents
    as stakeholders.
 
    In each of these examples, setup and ongoing operation of a multi-
-   stakeholder organization is not trivial.  This is the major downside
-   of such an approach.  Additionally, the legitimacy of such an
+   stakeholder organization is not trivial.  This is a major downside of
+   such an approach.  Additionally, the legitimacy of such an
    organization cannot be assumed, and may be difficult to establish and
    maintain (see, eg, [LEGITIMACY-MULTI]).  This concern is especially
    relevant if the function being coordinated is broad, complex, and/or
