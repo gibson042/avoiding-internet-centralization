@@ -127,13 +127,13 @@ Table of Contents
    This document discusses aspects of centralization with regard to
    Internet protocol design (note that 'protocol' is used somewhat
    loosely here, to also encompass what could be considered an
-   application).  Section 2 explains why it is necessary for Internet
-   protocols to avoid centralization when possible.  Section 3 surveys
-   the different kinds of centralization that Internet protocols might
-   be involved in.  Section 4 then catalogues high-level approaches to
-   mitigating centralization and discusses their limitations.  Finally,
-   Section 5 discusses cross-cutting interactions between centralization
-   and protocol design, recommending best practices where appropriate.
+   application).  Section 2 explains why centralization of Internet
+   functions is undesireable.  Section 3 surveys the different kinds of
+   centralization that Internet protocols might be involved in.
+   Section 4 then catalogues high-level approaches to mitigating
+   centralization and discusses their limitations.  Finally, Section 5
+   discusses cross-cutting interactions between centralization and
+   protocol design, recommending best practices where appropriate.
 
    Engineers who design and standardize Internet protocols are the
    primary audience for this document.  However, designers of
@@ -307,7 +307,7 @@ Table of Contents
    For example, cloud computing is used to deploy many Internet
    protocols.  Although the base concepts and control protocols for it
    avoid centralization in the sense that there is no need for a single,
-   central cloud provider, the economics of providing compute at scale
+   central cloud provider, the economics of providing compute at scale,
    as well as some social factors regarding developer familiarity and
    comfort encourage convergence on a small number of cloud providers.
 
@@ -512,7 +512,7 @@ Table of Contents
    this document, but at a high level, we can generalise about their
    properties.
 
-   These techniques avoid centralization risk by distributing
+   These techniques attempt to avoid centralization risk by distributing
    intermediary or otherwise potentially centralized functions to
    members of a large pool of protocol participants.  Verification of
    proper performance of a function is typically guaranteed using
