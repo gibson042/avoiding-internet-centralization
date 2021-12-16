@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-14T00:02:45.851886+00:00",
+  "timestamp": "2021-12-16T00:02:39.121923+00:00",
   "repo": "mnot/avoiding-internet-centralization",
   "labels": [
     {
@@ -67,6 +67,46 @@
       "updatedAt": "2021-12-08T05:58:54Z",
       "closedAt": "2021-12-08T05:58:54Z",
       "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOGCfj785Aar1e",
+      "title": "balancing against other goals",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/6",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "E.g., privacy sometimes comes up in tension (at least purportedly). However, privacy is *much* more effectively regulated by architecture than competition; play to our strengths.",
+      "createdAt": "2021-12-15T08:40:24Z",
+      "updatedAt": "2021-12-15T08:40:24Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOGCfj785Aar98",
+      "title": "build affordances for regulation",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/7",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "should be a primary goal for standards efforts.",
+      "createdAt": "2021-12-15T08:41:02Z",
+      "updatedAt": "2021-12-15T08:41:16Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "OWNER",
+          "body": "This includes building \"up\" into the proprietary spaces.",
+          "createdAt": "2021-12-15T08:41:16Z",
+          "updatedAt": "2021-12-15T08:41:16Z"
+        }
+      ]
     }
   ],
   "pulls": [
