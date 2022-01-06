@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-12-16T00:02:39.121923+00:00",
+  "timestamp": "2022-01-06T00:02:54.258116+00:00",
   "repo": "mnot/avoiding-internet-centralization",
   "labels": [
     {
@@ -107,6 +107,38 @@
           "updatedAt": "2021-12-15T08:41:16Z"
         }
       ]
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOGCfj785BJwEJ",
+      "title": "Economic aspects",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/8",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Brian suggests:\r\n  https://blog.apnic.net/wp-content/uploads/2021/12/MKGRA669-Report-for-APNIC-LACNIC-V3.pdf\r\n\r\n... as a potential reference to explore the economic aspects of centralisation.\r\n",
+      "createdAt": "2022-01-04T07:15:16Z",
+      "updatedAt": "2022-01-04T07:15:16Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOGCfj785BJwSO",
+      "title": "Define intermediation",
+      "url": "https://github.com/mnot/avoiding-internet-centralization/issues/9",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Watson [said](https://mailarchive.ietf.org/arch/msg/architecture-discuss/bBd0vGs5rGZaMBLCkcA_mtepRjw):\r\n\r\n> I think the comments on intermediaries in\r\ndraft-nottingham-avoiding-internet-centralization need some more work.\r\nIt's not clear to me why intermediation should be considered to lead\r\nto centralization. Often in examples I've seen the intermediation is\r\nnot a network but a mediator between the two ends. This can be\r\ncentralizing due to two sided market dynamics or decentralizing due to\r\nready access to many intermediates and a reduction in trust invested\r\nin an endpoint.\r\n>\r\n> From a network perspective all devices transporting packets are\r\nintermediaries between the hosts that ultimately generate them. While\r\nencryption does reduce the possible intervention of these boxes,\r\nthere's quite a few cases where they do do things, and even without\r\ncentralization manage to undercut permissionless innovation.\r\n\r\n... and I replied:\r\n\r\n> I may have been infected by a legal/policy perspective that assumes a much broader definition of 'intermediation' -- will try to clarify to get everyone on the same page.",
+      "createdAt": "2022-01-04T07:16:43Z",
+      "updatedAt": "2022-01-04T07:16:43Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
