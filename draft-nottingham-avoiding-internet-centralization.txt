@@ -217,19 +217,28 @@ Table of Contents
    *  _Creating Monoculture_: At the scale available to a centralized
       service or application, minor flaws in features such as
       recommendation algorithms can be magnified to a degree that can
-      have broad (even societal) consequences.  Diversity in these
-      functions is significantly more robust, when viewed systemically.
-      [POLYCENTRIC]
+      have broad (even societal) consequences.  Diversity in the
+      implementation of these functions is significantly more robust,
+      when viewed systemically.  [POLYCENTRIC]
 
    *  _Self-Reinforcement_: As widely noted (see, eg., [ACCESS]), a
       centralized service benefits from access to data which can be used
       to further improve its offerings, while denying such access to
       others.
 
+   See also [TECH-SUCCESS-FACTORS].
+
    To summarize, centralization would allow the Internet (or some part
    of it) to be captured, effectively turning it into a 'walled garden'
    that fails to meet both architectural design goals and users'
    expectations, and endangering its ongoing viability at the same time.
+
+   Note that it is important to distinguish efforts to combat
+   centralization from anti-competitive concerns (also known as "anti-
+   trust").  While (as per above) making the Internet more competitive
+   is a motivation for avoiding centralization, determining what is and
+   is not anti-competitive in a given market is a job for regulators and
+   courts, not standards bodies.
 
 3.  Kinds of Centralization
 
@@ -517,17 +526,21 @@ Table of Contents
    proper performance of a function is typically guaranteed using
    cryptographic techniques (often, an append-only transaction ledger).
    The assignment of a particular task to a node for handling usually
-   cannot be predicted or controlled.  To assure diversity in the pool
-   of participants (thereby preventing Sybil attacks), techniques such
-   as proof-of-work (where each participant has to demonstrate
-   significant consumption of resources) or proof-of-stake (where each
-   participant has some other incentive to execute correctly) are used.
+   cannot be predicted or controlled.
 
-   As such, these techniques purposefully disallow direct centralization
-   and are robust against inherited centralization.  Depending upon the
-   application in question, indirect and platform centralization may
-   still be possible, but in general these techniques do not lend
-   themselves to these ends as readily as federated systems do.
+   Sybil attacks (where enough participants coordinate their activity to
+   affect the protocol's operation) are a major concern for these
+   protocols.  Diversity in the pool of participants is encouraged using
+   indirect techniques such as proof-of-work (where each participant has
+   to demonstrate significant consumption of resources) or proof-of-
+   stake (where each participant has some other incentive to execute
+   correctly).
+
+   Appropriate use of these techniques creates barriers to direct and
+   inherited centralization.  Depending upon the application in
+   question, indirect and platform centralization may still be possible,
+   but in general these techniques do not lend themselves to these ends
+   as readily as federated systems do.
 
    However, distributed consensus technologies have several potential
    shortcomings that may make them inappropriate -- or at least
@@ -542,10 +555,11 @@ Table of Contents
        are still not suitable for broad deployment.
 
    2.  Their complexity and 'chattiness' typically results in
-       significantly less efficient use of the network.  When
-       distributed consensus protocols use proof-of-work, energy
-       consumption can become significant (to the point where some
-       jurisdictions have banned its use).
+       significantly less efficient use of the network (often, to
+       several orders of magnitude).  When distributed consensus
+       protocols use proof-of-work, energy consumption can become
+       significant (to the point where some jurisdictions have banned
+       its use).
 
    3.  Distributed consensus protocols are still not proven to scale to
        the degree expected of successful Internet protocols.  In
@@ -837,6 +851,13 @@ Table of Contents
               (Second Edition)", World Wide Web Consortium
               Recommendation REC-soap12-part0-20070427, 27 April 2007,
               <https://www.w3.org/TR/2007/REC-soap12-part0-20070427>.
+
+   [TECH-SUCCESS-FACTORS]
+              Kende, M., Kvalbein, A., Allford, J., and D. Abecassis,
+              "Study on the Internet's Technical Success Factors",
+              December 2021, <https://blog.apnic.net/wp-
+              content/uploads/2021/12/MKGRA669-Report-for-APNIC-LACNIC-
+              V3.pdf>.
 
    [W3C.CR-activitystreams-core-20161215]
               Snell, J. and E. Prodromou, "Activity Streams 2.0", World
