@@ -19,7 +19,7 @@ Abstract
    centralization, discusses the risks involved therein, attempts to
    identify different types of centralization, catalogues some
    limitations to common approaches to controlling it, and recommends
-   best practices for protocol designers.
+   best practices for Internet standards efforts.
 
 About This Document
 
@@ -79,12 +79,10 @@ Table of Contents
      4.2.  Multi-Stakeholder Administration is Hard
      4.3.  Blockchains Are Not Magical
    5.  What Should Internet Standards Do?
-     5.1.  Scrutinize Intermediation
-     5.2.  Encrypt at Layer Boundaries
-     5.3.  Reuse Existing Tools
-     5.4.  Accomodate Limited Domains Warily
-     5.5.  Target Extensibility
-     5.6.  Acknowledge the Limits of Protocol Design
+     5.1.  Manage Centralization Risk Where Effective
+     5.2.  Create Standards to Decentralize Proprietary Functions
+     5.3.  Limit Intermediary Power
+     5.4.  Avoid Over-Extensibility
    6.  Security Considerations
    7.  References
      7.1.  Normative References
@@ -240,6 +238,14 @@ Table of Contents
    is not anti-competitive in a given market is a job for regulators and
    courts, not standards bodies.
 
+   Likewise, a goal of avoiding centralization does not imply that a
+   given function need be so widely distributed that other important
+   factors, such as efficiency, resiliency, latency, or availability are
+   affected.  Just as in other areas (for example, the optimal number of
+   automakers), many factors need to be balanced.  In some cases, a
+   modest number of instances can effectively decentralize a function,
+   given the appropriate circumstances (see, for example, the DNS).
+
 3.  Kinds of Centralization
 
    Not all centralization of Internet protocols is equal; there are
@@ -297,9 +303,19 @@ Table of Contents
    between them (so long as the protocol facilitates that), the
    endpoints' mutual discovery typically requires a third party.
 
-   Internet protocols currently tend to mitigate necessary
-   centralization using measures such as mandated federation Section 4.1
-   and multi-stakeholder administration Section 4.2.
+   Internet protocols often attempt to mitigate necessary centralization
+   risk using measures such as mandated federation Section 4.1 and
+   multi-stakeholder administration Section 4.2.
+
+   Because of the inherent risks and costs of these approaches, when a
+   protocol function has necessary centralization risk and there exists
+   an already-deployed solution with appropriate mitigations, that
+   solution SHOULD be reused in favour of inventing a new one.
+
+   For example, if a protocol requires a coordinated, global naming
+   function, reusing the Domain Name System is preferable to
+   establishing a new system, because its centralization risk is known
+   and understood (see Section 4.2).
 
 3.3.  Indirect Centralization
 
@@ -364,10 +380,17 @@ Table of Contents
    moment, and the Internet's topology means that a 'choke point'
    upstream could still affect their Internet access.
 
-   Usually, inherited centralization -- both existing and anticipated --
-   is a factor to work around in protocol design, just as any other
-   constraint would be.  One effective tool for doing so is encryption,
-   discussed further in Section 5.2.
+   When deployed at scale, encryption can be an effective technique to
+   control many inherited centralization risks.  By reducing the number
+   of parties who have access to content of communication, the ability
+   of lower-layer protocols and intermediaries at those layers to
+   interfere with or observe is precluded.  Even when they can still
+   prevent communication, the use of encryption makes it more difficult
+   to discriminate the target from other traffic.
+
+   Note that the benefits are most pronounced when the majority (if not
+   all) traffic is encrypted.  As a result, protocols SHOULD be
+   encrypted by default.
 
 3.5.  Platform Centralization
 
@@ -421,12 +444,11 @@ Table of Contents
    2.  Routing messages to the user, even when they change network
        locations or are disconnected for long periods of time.
 
-   E-mail reuses DNS to mitigating first risk (see Section 5.3).  To
-   mitigate the second, it defines an intermediary role for routing
-   users' messages, the Message Transfer Agent (MTA).  By allowing
-   anyone to deploy a MTA and defining rules for interconnecting them,
-   the protocol's users avoid a requirement for a single, central
-   router.
+   E-mail reuses DNS to mitigating first risk.  To mitigate the second,
+   it defines an intermediary role for routing users' messages, the
+   Message Transfer Agent (MTA).  By allowing anyone to deploy a MTA and
+   defining rules for interconnecting them, the protocol's users avoid a
+   requirement for a single, central router.
 
    Users can (and often do) choose to delegate that role to someone
    else, or run their own MTA.  However, running your own mail server
@@ -607,29 +629,100 @@ Table of Contents
    There are also valuable contributions that standards efforts can make
    to other, more effective forms of regulation.
 
-5.1.  Scrutinize Intermediation
+5.1.  Manage Centralization Risk Where Effective
+
+   Some types of centralization risk are relatively easy to manage in
+   standards efforts.  A directly centralized protocol, were it to be
+   proposed, would be rejected out of hand by the IETF.  There is a
+   growning body of knowledge and experience with necessary
+   centralization, and a strong inclination to reuse existing
+   infrastructure where possible.  As discussed above, encryption is
+   often a way to manage inherited centralization.  All of these
+   responses are appropriate ways for Internet standards to manage
+   centralization risk.
+
+   However, precluding indirect and platform centralization are much
+   more difficult in standards efforts.  Because we have no "protocol
+   police", it's not possible to demand that someone stop building a
+   proprietary service using a purportedly federated protocol.  We
+   cannot stop someone from using our protocols to build centralized
+   services "on top" without violating architectural goals like
+   permissionless innovation.
+
+   Therefore, committing resources to scrutinizing protocols for
+   potential centralization risk -- especially for indirect and platform
+   risks -- is unlikely to actually prevent Internet centralization.
+   Almost all existing Internet protocols -- including IP, TCP, HTTP,
+   and DNS -- suffer some form of indirect or platform centralization.
+   Refusing to standardize a newer protocol because it faces similar
+   risks would not be equitable, proportionate, or effective.
+
+   Additionally, centralization risk is sometimes perceived to be in
+   tension with other goals, such as privacy.  While there is rarely a
+   pure tradeoff between two abstract goals such as these, if it were to
+   occur attention should be paid to how effective architectural
+   regulation (such as a standards effort) is in achieving each goal.
+   In this example, a technical mechanism might be much more effective
+   at improving privacy, whereas centralization might be better
+   controlled using other methods.
+
+5.2.  Create Standards to Decentralize Proprietary Functions
+
+   Instead, efforts should focus on creating new standards for functions
+   that are currently only satisfied by proprietary, centralized
+   protocols.  For example, if social networking is thought to be a
+   centralized function, this might mean creating specifications that
+   enable decentralized social networking, perhaps using some or all of
+   the techniques described in Section 4.
+
+   Keen readers will point out that social networking is effectively
+   centralized despite the existence of such standards (see, e.g.,
+   [W3C.CR-activitystreams-core-20161215]), because the IETF and W3C
+   create voluntary standards, not mandatory regulations.
+
+   However, architecture is not the only form of regulation; legal
+   mechanisms combined with changing norms and the resulting market
+   forces have their own regulatory effects.[NEW-CHICAGO] While for much
+   of its lifetime the Internet has only been subject to limited legal
+   regulation, that period appears to be ending.
+
+   It is far from certain that a legal mandate for interoperability
+   based upon Internet standards will eventuate, but it is increasingly
+   discussed as a remedy for competition issues (see, e.g., [OECD]).  It
+   is also not certain that legally-mandated standards will fully
+   address centralization risks.  However, if such specifications are
+   not available from the Internet community, they may be created
+   elsewhere without reference to the Internet's architectural goals.
+
+   Even absent a legal mandate, changes in norms -- due to increasing
+   knowledge and distrust of centralized functions -- can create demand
+   for such specifications and the corresponding implementations.
+
+5.3.  Limit Intermediary Power
 
    The introduction of an intermediary role -- i.e., one that performs a
-   function but is not a first party to communication -- adds
-   centralization risk to Internet protocols, because it brings
-   opportunities for control and observation.  Even when the protocol is
-   federated (see Section 4.1) to avoid direct centralization,
-   significant indirect centralization risks exist when intermediation
-   is allowed.
+   function but is not a first party to communication -- adds indirect
+   and platform centralization risk to Internet protocols, because it
+   brings opportunities for control and observation.  At the same time,
+   intermediation often adds significant value to a protocol, or enables
+   what is considered a necessary function.
 
-   However, intermediation can sometimes add significant value to a
-   protocol, or enable what is considered a necessary function.  In such
-   cases, the centralized function SHOULD be as minimal as possible, and
-   expose only the information and pontential for control necessary for
-   that function to be performed.  Protocol designers SHOULD consider
-   the likely deployment patterns for those intermediaries and how
-   network effects and other factors will influence them.
+   While (as discussed above) standards efforts have a very limited
+   capability to prevent or control indirect and platform
+   centralization, constraints on intermediary functions -- when
+   designed explicitly into a protocol -- and prevent at least the most
+   egregious outcomes.
 
-   Such predictions can be difficult.  For example, an intermediary
-   interposed by the end user of a protocol might allow them to delegate
-   functions to a party they trust, thereby empowering them.  However,
-   if an intervening network is able to force users to delegate to a
-   particular intermediary, inherited centralization could result.
+   In general, this can be achieved by limiting the nature of the
+   intermediary role to the most minimal function possible.  In doing
+   so, the opportunity for observation and control is minimized.
+
+   For example, HTTP allows intermediaries to see the full content of
+   traffic by default, even when they are only performing basic
+   functions such as routing.  However, with the introduction of HTTPS
+   and the CONNECT method (see Section 9.3.6 of [HTTP]), combined with
+   market forces to adopt HTTPS, those intermediaries now only have
+   access to the appropriate routing information.
 
    When carefully considered, intermediation can be a powerful way to
    enforce functional boundaries -- for example, to reduce the need for
@@ -644,57 +737,17 @@ Table of Contents
 
    See [I-D.thomson-tmi] for more guidance.
 
-5.2.  Encrypt at Layer Boundaries
+   Another kind of intermediation is created when a new feature or
+   service is built using a standard as a substrate.  For example, many
+   Web sites offer new functions like social networking and aggregated
+   news updates that can be viewed as a form of proprietary protocol.
+   These intermediaries may not be a format part of the underlying
+   protocol (in the case of Web sites, HTTP), but they can still
+   interpose a third party into communication.  This kind of
+   intermediation is more effectively dealt with by standardising the
+   function; see Section 5.2.
 
-   When deployed at scale, encryption can be an effective technique to
-   reduce many inherited centralization risks.  By reducing the number
-   of parties who have access to content of communication, the ability
-   of lower-layer protocols and intermediaries at those layers to
-   interfere with or observe is precluded.  Even when they can still
-   prevent communication, the use of encryption makes it more difficult
-   to discriminate the target from other traffic.
-
-   Note that the benefits are most pronounced when the majority (if not
-   all) traffic is encrypted.  As a result, protocols SHOULD be
-   encrypted by default.
-
-   See also [RFC7258].
-
-5.3.  Reuse Existing Tools
-
-   When a protocol function has necessary centralization risk and there
-   exists an already-deployed solution with appropriate mitigations,
-   that solution should be reused in favour of inventing a new one.
-
-   For example, if a protocol requires a coordinated, global naming
-   function, reusing the Domain Name System is preferable to
-   establishing a new system, because its centralization risk is known
-   and understood (see Section 4.2).
-
-5.4.  Accomodate Limited Domains Warily
-
-   [RFC8799] explores a class of protocols that operate in 'limited
-   domains' -- that is, they are not intended to be 'full' Internet
-   protocols with broad applicability, but instead operation within a
-   particular network or other constrained environment.
-
-   Often, limited-domain protocols address network requirements -- for
-   example, imposing security policy, integrating services or
-   application functions into the network, or differentiating different
-   classes of network services.
-
-   Such network-centric requirements can introduce the risk of inherited
-   centralization when they allow the network to interpose itself and
-   its requirements between the endpoints of a given communication.
-
-   These risks can be partially mitigated by requiring such functions to
-   be opted into by one or both endpoints (once both the network and the
-   endpoint are authenticated to each other), so that the network is
-   acting on their behalf.  However, this approach is still vulnerable
-   to indirect centralization, because the endpoints may be pressured to
-   acquiesce to a network's demands.
-
-5.5.  Target Extensibility
+5.4.  Avoid Over-Extensibility
 
    An important feature of Internet protocols is their ability to evolve
    over time, so that they can meet new requirements and adapt to new
@@ -703,11 +756,11 @@ Table of Contents
    mechanisms, where optional features can be added over time in an
    interoperable fashion.
 
-   Protocol extensions can bring risk of platform centralization if a
-   powerful entity can change the target for meaningful interoperability
-   by adding proprietary extensions to a standard protocol.  This is
-   especially true when the core standard does not itself provide
-   sufficient utility to be appealing on its own.
+   However, protocol extensions can also bring risk of platform
+   centralization if a powerful entity can change the target for
+   meaningful interoperability by adding proprietary extensions to a
+   standard protocol.  This is especially true when the core standard
+   does not itself provide sufficient utility on its own.
 
    For example, the SOAP protocol [SOAP] was an extremely flexible
    framework, allowing vendors to attempt to capture the market by
@@ -724,22 +777,6 @@ Table of Contents
    points are defined, they SHOULD NOT allow an extension to declare
    itself to be mandatory-to-interoperate, as that pattern invites
    abuse.
-
-5.6.  Acknowledge the Limits of Protocol Design
-
-   Centralization cannot be prevented through protocol design and
-   standardization efforts alone.  While the guidelines above may
-   forestall some types of centralization, indirect and platform
-   centralization are often outside the control of a protocol's
-   architecture.
-
-   Thankfully, architecture is not the only form of regulation; legal
-   mechanisms combined with changing norms and the resulting market
-   forces have their own regulatory effects.  [NEW-CHICAGO]
-
-   In this view, the job of a protocol designer is to avoid
-   centralization with architecture where possible, but where it is not,
-   to create affordances for these other regulating forces.
 
 6.  Security Considerations
 
@@ -811,6 +848,12 @@ Table of Contents
    [NEW-CHICAGO]
               Lessig, L., "The New Chicago School", June 1998.
 
+   [OECD]     OECD, "Data portability, interoperability and digital
+              platform competition", June 2021,
+              <https://www.oecd.org/daf/competition/data-portability-
+              interoperability-and-digital-platform-competition-
+              2021.pdf>.
+
    [PIR]      Olumofin, F. and I. Goldberg, "Revisiting the
               Computational Practicality of Private Information
               Retrieval", 2010.
@@ -830,14 +873,6 @@ Table of Contents
    [RFC6120]  Saint-Andre, P., "Extensible Messaging and Presence
               Protocol (XMPP): Core", RFC 6120, DOI 10.17487/RFC6120,
               March 2011, <https://www.rfc-editor.org/rfc/rfc6120>.
-
-   [RFC7258]  Farrell, S. and H. Tschofenig, "Pervasive Monitoring Is an
-              Attack", BCP 188, RFC 7258, DOI 10.17487/RFC7258, May
-              2014, <https://www.rfc-editor.org/rfc/rfc7258>.
-
-   [RFC8799]  Carpenter, B. and B. Liu, "Limited Domains and Internet
-              Protocols", RFC 8799, DOI 10.17487/RFC8799, July 2020,
-              <https://www.rfc-editor.org/rfc/rfc8799>.
 
    [RFC8890]  Nottingham, M., "The Internet is for End Users", RFC 8890,
               DOI 10.17487/RFC8890, August 2020,
