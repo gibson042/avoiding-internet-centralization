@@ -3,9 +3,9 @@
 
 
 Network Working Group                                      M. Nottingham
-Internet-Draft                                          15 December 2021
+Internet-Draft                                            7 January 2022
 Intended status: Informational                                          
-Expires: 18 June 2022
+Expires: 11 July 2022
 
 
                     Avoiding Internet Centralization
@@ -13,8 +13,8 @@ Expires: 18 June 2022
 
 Abstract
 
-   While the Internet was designed and founded as a decentralized
-   network-of-networks, it is continuously subjected to forces that
+   The Internet was designed and is operated as a decentralized network-
+   of-networks, but it is continuously subjected to forces that
    encourage its centralization.  This document offers a definition of
    centralization, discusses the risks involved therein, attempts to
    identify different types of centralization, catalogues some
@@ -47,11 +47,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 June 2022.
+   This Internet-Draft will expire on 11 July 2022.
 
 Copyright Notice
 
-   Copyright (c) 2021 IETF Trust and the persons identified as the
+   Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -78,9 +78,9 @@ Table of Contents
      4.1.  Federation isn't Enough
      4.2.  Multi-Stakeholder Administration is Hard
      4.3.  Blockchains Are Not Magical
-   5.  Guidelines for Protocol Designers
-     5.1.  Allow Intermediation Sparingly
-     5.2.  Encrypt, Always
+   5.  What Should Internet Standards Do?
+     5.1.  Scrutinize Intermediation
+     5.2.  Encrypt at Layer Boundaries
      5.3.  Reuse Existing Tools
      5.4.  Accomodate Limited Domains Warily
      5.5.  Target Extensibility
@@ -128,20 +128,20 @@ Table of Contents
    Internet protocol design (note that 'protocol' is used somewhat
    loosely here, to also encompass what could be considered an
    application).  Section 2 explains why centralization of Internet
-   functions is undesireable.  Section 3 surveys the different kinds of
+   functions is undesirable.  Section 3 surveys the different kinds of
    centralization that Internet protocols might be involved in.
    Section 4 then catalogues high-level approaches to mitigating
    centralization and discusses their limitations.  Finally, Section 5
-   discusses cross-cutting interactions between centralization and
-   protocol design, recommending best practices where appropriate.
+   considers the role that Internet standards play in avoiding
+   centralization and mitigating its effects.
 
    Engineers who design and standardize Internet protocols are the
    primary audience for this document.  However, designers of
    proprietary protocols can benefit from considering aspects of
    centralization, especially if they intend their protocol to be
-   considered for standardisation.  Likewise, policymakers can use this
-   document to help identify and remedy inappropriately centralized
-   protocols and applications.
+   considered for eventual standardisation.  Likewise, policymakers can
+   use this document to help identify and remedy inappropriately
+   centralized protocols and applications.
 
 1.1.  Notational Conventions
 
@@ -153,11 +153,11 @@ Table of Contents
 
 2.  Why Avoid Centralization
 
-   Centralization is undesirable in the design of Internet protocols for
-   many reasons -- in particular, because it is counter to the nature of
-   the Internet, because it violates the purpose of the Internet from
-   the perspective of its end users, and because of the many negative
-   effects it can have on the networks operation and evolution.
+   Centralization is undesirable in the design of Internet protocols
+   because it is counter to the nature of the Internet, because it
+   violates the purpose of the Internet from the perspective of its end
+   users, and because of the many negative effects it can have on the
+   networks operation and evolution.
 
    Firstly, the Internet's very nature is incompatible with
    centralization of its functions.  As a 'large, heterogeneous
@@ -229,8 +229,7 @@ Table of Contents
    To summarize, centralization would allow the Internet (or some part
    of it) to be captured, effectively turning it into a 'walled garden'
    that fails to meet both architectural design goals and users'
-   expectations, while endangering the viability of the Internet at the
-   same time.
+   expectations, and endangering its ongoing viability at the same time.
 
 3.  Kinds of Centralization
 
@@ -575,15 +574,26 @@ Table of Contents
 
    These potential shortcomings do not rule out the use of distributed
    consensus technologies for every use case.  They do, however, caution
-   against relying upon these technologies uncritically.
+   against relying upon these technologies to avoid centralization
+   uncritically.
 
-5.  Guidelines for Protocol Designers
+5.  What Should Internet Standards Do?
 
-   While the following recommendations are not a complete guide, they
-   can be a starting point for avoiding or mitigating centralization in
-   Internet protocols.
+   Centralization is driven by powerful forces -- both economic and
+   social -- as well as the network effects that come with Internet
+   scale.  Moreover, because permissionless innovation is a core value
+   for the Internet, and yet much of the centralization we see is by
+   proprietary platforms that take advantage of this nature, the
+   controls available to standards efforts on their own are very
+   limited.
 
-5.1.  Allow Intermediation Sparingly
+   Nevertheless, while standards bodies on their own cannot prevent
+   centralization, there are meaningful steps that can be taken to
+   prevent some functions from exhibiting some forms of centralization.
+   There are also valuable contributions that standards efforts can make
+   to other, more effective forms of regulation.
+
+5.1.  Scrutinize Intermediation
 
    The introduction of an intermediary role -- i.e., one that performs a
    function but is not a first party to communication -- adds
@@ -620,7 +630,7 @@ Table of Contents
 
    See [I-D.thomson-tmi] for more guidance.
 
-5.2.  Encrypt, Always
+5.2.  Encrypt at Layer Boundaries
 
    When deployed at scale, encryption can be an effective technique to
    reduce many inherited centralization risks.  By reducing the number
@@ -759,9 +769,9 @@ Table of Contents
    [I-D.pauly-dprive-oblivious-doh]
               Kinnear, E., McManus, P., Pauly, T., Verma, T., and C. A.
               Wood, "Oblivious DNS Over HTTPS", Work in Progress,
-              Internet-Draft, draft-pauly-dprive-oblivious-doh-08, 3
-              December 2021, <https://datatracker.ietf.org/doc/html/
-              draft-pauly-dprive-oblivious-doh-08>.
+              Internet-Draft, draft-pauly-dprive-oblivious-doh-09, 5
+              January 2022, <https://datatracker.ietf.org/doc/html/
+              draft-pauly-dprive-oblivious-doh-09>.
 
    [I-D.thomson-tmi]
               Thomson, M., "Principles for the Involvement of
