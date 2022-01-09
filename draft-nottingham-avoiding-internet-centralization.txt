@@ -18,9 +18,9 @@ Abstract
    encourage centralization.
 
    This document offers a definition of centralization, explains why it
-   is undesirable, identifies different types of it, catalogues
-   limitations of common approaches to controlling it, and explores what
-   Internet standards efforts can do to address it.
+   is undesirable, identifies different types of centralization,
+   catalogues limitations of common approaches to controlling it, and
+   explores what Internet standards efforts can do to address it.
 
 About This Document
 
@@ -617,7 +617,7 @@ Table of Contents
    centralization, there are meaningful steps that can be taken to
    prevent some functions from exhibiting some forms of centralization.
    There are also valuable contributions that standards efforts can make
-   to other, more effective forms of regulation.
+   to other relevant forms of regulation.
 
 6.1.  Manage Centralization Risk Where Effective
 
