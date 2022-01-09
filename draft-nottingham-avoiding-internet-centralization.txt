@@ -839,7 +839,7 @@ Table of Contents
               Aligia, P.D. and V. Tarko, "Polycentricity: From Polanyi
               to Ostrom, and Beyond", April 2012.
 
-   [RAND]     Baran, P., "On Distributed Communications: Introdution to
+   [RAND]     Baran, P., "On Distributed Communications: Introduction to
               Distributed Communications Networks", 1964,
               <https://www.rand.org/pubs/research_memoranda/
               RM3420.html>.
